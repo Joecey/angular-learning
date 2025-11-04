@@ -1,0 +1,26 @@
+<head>
+  <title>{{ title() }}</title>
+</head>
+
+<style>
+  .star-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .button {
+    max-width: 100px;
+  }
+</style>
+
+<div class="star-content">
+  <img
+    (dblclick)="onStarDoublePress()"
+    src="https://upload.wikimedia.org/wikipedia/commons/3/34/Red_star.svg"
+    height="42"
+    width="42"
+  />
+  <h4 [hidden]="messageHidden">Look at the star!!</h4>
+  <button class="button" (click)="onPress()">Press me!</button>
+  <p><strong>Number of button presses:</strong> {{ count }}</p>
+</div>
