@@ -1,0 +1,28 @@
+<style>
+  .input-box {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .button {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+</style>
+
+<h2>People</h2>
+<div>
+  <ol>
+    @for(person of people; track person){
+    <li>{{ person }}</li>
+    }
+  </ol>
+</div>
+
+<div class="input-box">
+  <p>Enter name: <input [(ngModel)]="nameInput" /></p>
+  <button class="button" (click)="submitName()">Submit</button>
+  <button class="button" (click)="removeLast()">Remove</button>
+</div>
