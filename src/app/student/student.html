@@ -1,0 +1,10 @@
+<h2>Students</h2>
+
+<ul>
+  @for(student of students; track student.ID){
+  <li>
+    {{ student.ID }}, {{ student.firstName }}, {{ student.surname }}, {{ student.age }},
+    {{ student.sex }},
+  </li>
+  }
+</ul>
